@@ -2,7 +2,9 @@
 # Proyecto I+D Procesamiento SDR en cluster distribuido
 
 # Infraestructura basica
-## Instalar ZeroTier
+
+
+n## Instalar ZeroTier
 
 -   Bajar e instalar cliente ZeroTier desde el [sitio oficial ZeroTier](https://www.zerotier.com/download/)
 
