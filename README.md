@@ -1,6 +1,15 @@
 # Cluster UADER-FCyT 
 # Proyecto I+D Procesamiento SDR en cluster distribuido
 
+
+# Actualizar GitHub
+
+cd /clusterfs/sdr
+git add .
+git commit -m "XXX"
+git push origin
+
+
 # Infraestructura basica
 
 
