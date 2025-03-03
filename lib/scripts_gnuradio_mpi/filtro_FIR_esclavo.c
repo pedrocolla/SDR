@@ -34,12 +34,11 @@ int main(int argc, char** argv){
     int num_coefs;
     MPI_Bcast(&num_coefs, 1, MPI_INT, 0, comm_master);
     
-    // Recibe los coeficientes y los guarda. TAG 0
-    //float coefs[num_coefs];
+    // Recibe todos los coeficientes y los guarda. TAG 0
     float* coefs = malloc(sizeof(float) * num_coefs);
     if(!coefs)
     {
-        printf("Falló la asignación de memoria al array de coeficientes.");
+        printf("Falló la asignación de memoria al array de coeficientes. Esclavo: %d\n", node);
         return 1;
     }
     MPI_Bcast(coefs, num_coefs, MPI_FLOAT, 0, comm_master);
@@ -51,13 +50,20 @@ int main(int argc, char** argv){
     // Recibe la cantidad de coeficientes que le corresponde calcular
     int num_coefs_locales;
     MPI_Recv(&num_coefs_locales, 1, MPI_INT, 0, 0, comm_master, MPI_STATUS_IGNORE);
-    printf("Esclavo %d: Calcula de %d a %d. \n", node, indice_primer_coef, indice_primer_coef+num_coefs_locales-1);
+
+    if(num_coefs_locales == 0)
+    {
+        printf("El número de coeficientes asignados es 0. Esclavo: %d\n", node);
+    }else
+    {
+        printf("Esclavo %d: Calcula de %d a %d. \n", node, indice_primer_coef, indice_primer_coef+num_coefs_locales-1);    
+    }
     
-    //float historial[num_coefs-1];
+    // Crea el espacio para almacenar las muestras del filtro completo
     float* historial = malloc(sizeof(float)*(num_coefs-1));
     if(!historial)
     {
-        printf("Falló la asignación de memoria al array de historial.");
+        printf("Falló la asignación de memoria al array de historial. Esclavo: %d\n", node);
         free(coefs);
         free(historial);
         return 1;
@@ -80,9 +86,8 @@ int main(int argc, char** argv){
         MPI_Bcast(&num_muestras, 1, MPI_INT, 0, comm_master);
         //printf("Recibida correctamente la cantidad de muestras esperada (%d). Esclavo: %d\n", num_muestras, node);
         
-        // Luego se prepara el buffer y recibe las muestras.
-        //float entrada[num_muestras];
-        
+        // Cada vez que reciba un volumen mayor a cualquiera recibido anteriormente, aumenta de forma permanente
+        // el tamaño de los buffers. 
         if(num_muestras > tamaño_actual_entrada)
         {
             free(entrada);
@@ -92,7 +97,7 @@ int main(int argc, char** argv){
             tamaño_actual_entrada = num_muestras;
             if(!entrada || !salida)
             {
-                printf("Falló la asignación de memoria a los array de entrada y salida.");
+                printf("Falló la asignación de memoria a los array de entrada y salida. Esclavo: %d\n", node);
                 free(entrada);
                 free(salida);
                 free(coefs);
@@ -103,8 +108,6 @@ int main(int argc, char** argv){
         
         MPI_Bcast(entrada, num_muestras, MPI_FLOAT, 0, comm_master);
         //printf("Muestras recibidas correctamente. Esclavo: %d\n", node);
-        
-        //float salida[num_muestras];
         
         for(int i=0; i < num_muestras;i++)
         {
@@ -152,6 +155,7 @@ int main(int argc, char** argv){
     printf("Finalizando... Esclavo: %d\n", node);
     MPI_Finalize();
 }
+
 /*
         // Convolución con historial
         int lim_historial = num_coefs-1;

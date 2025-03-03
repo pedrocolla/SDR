@@ -90,7 +90,7 @@ blocks:
     alias: ''
     amp: '1'
     comment: ''
-    freq: '8000'
+    freq: '10'
     maxoutbuf: '0'
     minoutbuf: '0'
     offset: '0'
@@ -118,7 +118,7 @@ blocks:
     comment: FIR Orden10 Hamming Fc=8000Hz Fs=44,1kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_nodo: '1'
+    num_nodo: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -143,7 +143,7 @@ blocks:
     comment: FIR Orden20 Hamming Fc=8000Hz Fs=44,1kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_nodo: '1'
+    num_nodo: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -156,11 +156,11 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    coef: '[1.0, 0, 0, 0, 0, 0, 0]'
+    coef: '[1.0, 0.0]'
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_nodo: '1'
+    num_nodo: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -226,7 +226,7 @@ blocks:
     comment: FIR Orden100 Hamming Fc=100Hz Fs=1000Hz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_nodo: '2'
+    num_nodo: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -622,12 +622,14 @@ connections:
 - [analog_noise_source_x_0_0, '0', fir_filter_xxx_0_0_0, '0']
 - [analog_sig_source_x_0, '0', customModule_filtro_FIR_cluster_0, '0']
 - [analog_sig_source_x_0, '0', customModule_filtro_FIR_cluster_0_0, '0']
+- [analog_sig_source_x_0, '0', customModule_filtro_FIR_cluster_0_1, '0']
 - [analog_sig_source_x_0, '0', fir_filter_xxx_0_0, '0']
 - [customModule_filtro_FIR_cluster_0, '0', qtgui_freq_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0, '0', qtgui_time_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_0, '0', qtgui_freq_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_0, '0', qtgui_time_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_1, '0', qtgui_freq_sink_x_0, '0']
+- [customModule_filtro_FIR_cluster_0_1, '0', qtgui_time_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_2, '0', qtgui_freq_sink_x_0_0, '0']
 - [fir_filter_xxx_0, '0', qtgui_freq_sink_x_0, '0']
 - [fir_filter_xxx_0_0, '0', qtgui_freq_sink_x_0, '0']
