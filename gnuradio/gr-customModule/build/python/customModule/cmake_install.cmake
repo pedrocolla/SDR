@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/python/customModule
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,26 +44,26 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule" TYPE FILE FILES
-    "/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/__init__.py"
-    "/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/addSubSelect.py"
-    "/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/escalar_flotante.py"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/__init__.py"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/addSubSelect.py"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/escalar_flotante.py"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule" TYPE FILE FILES
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/__init__.pyc"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/addSubSelect.pyc"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/escalar_flotante.pyc"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/__init__.pyo"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/addSubSelect.pyo"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/escalar_flotante.pyo"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/__init__.pyc"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/addSubSelect.pyc"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/escalar_flotante.pyc"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/__init__.pyo"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/addSubSelect.pyo"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/escalar_flotante.pyo"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/cmake_install.cmake")
 
 endif()
 

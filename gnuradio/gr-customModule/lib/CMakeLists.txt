@@ -16,7 +16,8 @@ list(APPEND customModule_sources
     filtro_FIR_3polos_cpp_impl.cc
     filtro_FIR_cpp_impl.cc
     hello_mpi_gnuradio_impl.cc
-    filtro_FIR_cluster_impl.cc )
+    filtro_FIR_cluster_impl.cc
+    filtro_FIR_cluster_log_impl.cc )
 
 set(customModule_sources "${customModule_sources}" PARENT_SCOPE)
 if(NOT customModule_sources)

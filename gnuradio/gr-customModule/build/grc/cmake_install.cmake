@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/grc
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/grc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,14 +44,15 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_addSubSelect.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_multDivSelect.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_escalar_flotante.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_escalar_flotante_cpp.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_3polos_cpp.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_cpp.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_hello_mpi_gnuradio.block.yml"
-    "/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_cluster.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_addSubSelect.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_multDivSelect.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_escalar_flotante.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_escalar_flotante_cpp.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_3polos_cpp.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_cpp.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_hello_mpi_gnuradio.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_cluster.block.yml"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/grc/customModule_filtro_FIR_cluster_log.block.yml"
     )
 endif()
 

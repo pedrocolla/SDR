@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_3polos_cpp_impl.cc.o.d"
   "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cluster_impl.cc.o"
   "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cluster_impl.cc.o.d"
+  "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cluster_log_impl.cc.o"
+  "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cluster_log_impl.cc.o.d"
   "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cpp_impl.cc.o"
   "CMakeFiles/gnuradio-customModule.dir/filtro_FIR_cpp_impl.cc.o.d"
   "CMakeFiles/gnuradio-customModule.dir/hello_mpi_gnuradio_impl.cc.o"

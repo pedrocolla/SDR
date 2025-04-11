@@ -32,8 +32,8 @@ filtro_FIR_cluster_impl::filtro_FIR_cluster_impl(const std::vector<float>& coef,
                          1 /* min outputs */, 1 /*max outputs */, sizeof(output_type)))
 {
     _num_nodos = num_nodo;
-    
-    char cpuname[20];
+
+    char cpuname[MPI_MAX_PROCESSOR_NAME];
     int  cpulen;
     MPI_Init(NULL, NULL);
 
@@ -42,7 +42,7 @@ filtro_FIR_cluster_impl::filtro_FIR_cluster_impl(const std::vector<float>& coef,
     
     printf("[%s] Filtro maestro iniciado.\n", cpuname);
     
-    MPI_Comm_spawn("/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo", MPI_ARGV_NULL, _num_nodos, MPI_INFO_NULL, 0, MPI_COMM_SELF, &inter_comm, MPI_ERRCODES_IGNORE);
+    MPI_Comm_spawn("/srv/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo", MPI_ARGV_NULL, _num_nodos, MPI_INFO_NULL, 0, MPI_COMM_SELF, &inter_comm, MPI_ERRCODES_IGNORE);
     
     int _num_coefs = coef.size();
     
@@ -91,10 +91,13 @@ filtro_FIR_cluster_impl::~filtro_FIR_cluster_impl()
     printf("MPI finalizado correctamente en el maestro.\n");
 }
 
+
 int filtro_FIR_cluster_impl::work(int noutput_items,
                                   gr_vector_const_void_star& input_items,
                                   gr_vector_void_star& output_items)
 {
+    
+    // Inicio del ciclo de trabajo distribuido actual.
     auto in = static_cast<const input_type*>(input_items[0]);
     auto out = static_cast<output_type*>(output_items[0]);
 
@@ -110,19 +113,10 @@ int filtro_FIR_cluster_impl::work(int noutput_items,
     MPI_Bcast((void*)in, noutput_items, MPI_FLOAT, MPI_ROOT, inter_comm);
     //printf("Enviadas correctamente las muestras.\n");
     
-    //MPI_Reduce(const void *sendbuf, void *recvbuf, int count,
-      //         MPI_Datatype datatype, MPI_Op op, int root,
-        //       MPI_Comm comm)
-    
+    //MPI_Reduce(const void *sendbuf, void *recvbuf, int count, MPI_Datatype datatype, MPI_Op op, int root, MPI_Comm comm);
     MPI_Reduce(NULL, out, noutput_items, MPI_FLOAT, MPI_SUM, MPI_ROOT, inter_comm);
-    /*
-    for(int n=0; n< _num_nodos; n++)
-    {
-        float[]
-        MPI_Gather(NULL, 0, MPI_FLOAT, out, noutput_items, MPI_FLOAT, MPI_ROOT, inter_comm);
-    }*/
-    
     //printf("Recibidas correctamentes las muestras filtradas.\n");
+    
     return noutput_items;
 }
 

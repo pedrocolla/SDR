@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/lib
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -55,8 +55,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf" TYPE SHARED_LIBRARY FILES
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so.1.0.0.0"
-    "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so.1.0.0"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so.1.0.0.0"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so.1.0.0"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf/libgnuradio-customModule.so.1.0.0.0"
@@ -82,7 +82,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf/libgnuradio-customModule.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf" TYPE SHARED_LIBRARY FILES "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf" TYPE SHARED_LIBRARY FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/libgnuradio-customModule.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf/libgnuradio-customModule.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/arm-linux-gnueabihf/libgnuradio-customModule.so")
     file(RPATH_CHANGE
@@ -99,7 +99,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule/gnuradio-customModuleTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule/gnuradio-customModuleTargets.cmake"
-         "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets.cmake")
+         "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule/gnuradio-customModuleTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -112,13 +112,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/CMakeFiles/Export/829ecdfbb94c6ac032bc904cef5b655e/gnuradio-customModuleTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/clusterfs/sdr/gnuradio/gr-customModule/build/lib/cmake/Modules/gnuradio-customModuleConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/cmake/Modules/gnuradio-customModuleConfig.cmake")
 endif()
 

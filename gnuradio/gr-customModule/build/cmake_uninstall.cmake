@@ -1,10 +1,10 @@
 # http://www.vtk.org/Wiki/CMake_FAQ#Can_I_do_.22make_uninstall.22_with_CMake.3F
 
-IF(NOT EXISTS "/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt")
+IF(NOT EXISTS "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/srv/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt")
 
-FILE(READ "/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt" files)
+FILE(READ "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

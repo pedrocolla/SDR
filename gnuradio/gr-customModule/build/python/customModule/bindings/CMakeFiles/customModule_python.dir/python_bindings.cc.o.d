@@ -1,5 +1,5 @@
 python/customModule/bindings/CMakeFiles/customModule_python.dir/python_bindings.cc.o: \
- /clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings/python_bindings.cc \
+ /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings/python_bindings.cc \
  /usr/include/stdc-predef.h /usr/include/pybind11/pybind11.h \
  /usr/include/pybind11/detail/class.h /usr/include/pybind11/attr.h \
  /usr/include/pybind11/detail/common.h /usr/include/python3.11/Python.h \

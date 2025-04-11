@@ -13,5 +13,6 @@ install(FILES
     customModule_filtro_FIR_3polos_cpp.block.yml
     customModule_filtro_FIR_cpp.block.yml
     customModule_hello_mpi_gnuradio.block.yml
-    customModule_filtro_FIR_cluster.block.yml DESTINATION share/gnuradio/grc/blocks
+    customModule_filtro_FIR_cluster.block.yml
+    customModule_filtro_FIR_cluster_log.block.yml DESTINATION share/gnuradio/grc/blocks
 )

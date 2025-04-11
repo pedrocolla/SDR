@@ -33,7 +33,8 @@ list(APPEND customModule_python_files
     filtro_FIR_3polos_cpp_python.cc
     filtro_FIR_cpp_python.cc
     hello_mpi_gnuradio_python.cc
-    filtro_FIR_cluster_python.cc python_bindings.cc)
+    filtro_FIR_cluster_python.cc
+    filtro_FIR_cluster_log_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(customModule
    ../../..

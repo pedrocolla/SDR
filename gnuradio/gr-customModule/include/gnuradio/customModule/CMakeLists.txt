@@ -16,5 +16,6 @@ install(FILES
     filtro_FIR_3polos_cpp.h
     filtro_FIR_cpp.h
     hello_mpi_gnuradio.h
-    filtro_FIR_cluster.h DESTINATION include/gnuradio/customModule
+    filtro_FIR_cluster.h
+    filtro_FIR_cluster_log.h DESTINATION include/gnuradio/customModule
 )

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /clusterfs/sdr/gnuradio/gr-customModule
+CMAKE_SOURCE_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /clusterfs/sdr/gnuradio/gr-customModule/build
+CMAKE_BINARY_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule/build
 
 # Utility rule file for pygen_apps_9a6dd283c3de653fbca500f9721f634f.
 
@@ -74,10 +74,10 @@ apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/build: pygen_app
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/build
 
 apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/clean:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/cmake_clean.cmake
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/cmake_clean.cmake
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/clean
 
 apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/depend:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /clusterfs/sdr/gnuradio/gr-customModule /clusterfs/sdr/gnuradio/gr-customModule/apps /clusterfs/sdr/gnuradio/gr-customModule/build /clusterfs/sdr/gnuradio/gr-customModule/build/apps /clusterfs/sdr/gnuradio/gr-customModule/build/apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/DependInfo.cmake --color=$(COLOR)
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /srv/clusterfs/sdr/gnuradio/gr-customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/apps /srv/clusterfs/sdr/gnuradio/gr-customModule/build /srv/clusterfs/sdr/gnuradio/gr-customModule/build/apps /srv/clusterfs/sdr/gnuradio/gr-customModule/build/apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd283c3de653fbca500f9721f634f.dir/depend
 

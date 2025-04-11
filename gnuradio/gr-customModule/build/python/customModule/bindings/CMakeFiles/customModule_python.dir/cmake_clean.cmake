@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/customModule_python.dir/escalar_flotante_cpp_python.cc.o.d"
   "CMakeFiles/customModule_python.dir/filtro_FIR_3polos_cpp_python.cc.o"
   "CMakeFiles/customModule_python.dir/filtro_FIR_3polos_cpp_python.cc.o.d"
+  "CMakeFiles/customModule_python.dir/filtro_FIR_cluster_log_python.cc.o"
+  "CMakeFiles/customModule_python.dir/filtro_FIR_cluster_log_python.cc.o.d"
   "CMakeFiles/customModule_python.dir/filtro_FIR_cluster_python.cc.o"
   "CMakeFiles/customModule_python.dir/filtro_FIR_cluster_python.cc.o.d"
   "CMakeFiles/customModule_python.dir/filtro_FIR_cpp_python.cc.o"

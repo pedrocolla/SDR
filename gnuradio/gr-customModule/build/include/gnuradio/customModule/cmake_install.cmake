@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,13 +44,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gnuradio/customModule" TYPE FILE FILES
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/api.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/multDivSelect.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/escalar_flotante_cpp.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_3polos_cpp.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_cpp.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/hello_mpi_gnuradio.h"
-    "/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_cluster.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/api.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/multDivSelect.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/escalar_flotante_cpp.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_3polos_cpp.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_cpp.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/hello_mpi_gnuradio.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_cluster.h"
+    "/srv/clusterfs/sdr/gnuradio/gr-customModule/include/gnuradio/customModule/filtro_FIR_cluster_log.h"
     )
 endif()
 

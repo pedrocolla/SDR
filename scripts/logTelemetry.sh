@@ -10,7 +10,7 @@
 #*------------------------------------------------------------------------------------------------
 HOST=$(hostname)
 TIME=$(date)
-STATUS=$(/clusterfs/sdr/scripts/setTelemetry.sh)
+STATUS=$(/srv/clusterfs/sdr/scripts/setTelemetry.sh)
 cd /home/pi/Descargas
 echo " " >> /home/pi/$HOST.log
 echo "$HOST $TIME $STATUS" >> /home/pi/$HOST.log

@@ -58,8 +58,15 @@ echo $STATUS | cut -f2 -d"="
 #* Get telemetry from all major sub-systems
 #*-----------------------------------------------------------------------------
 getDASD () {
-FS=$(df | grep "/dev/mm" | grep -v "/boot/firmware" | cut -f1 -d" ")
-sudo df -k | grep $FS | awk '{ print $5 ; }' | cut -f1 -d"%"
+#FS=$(df | grep "/dev/mm" | grep -v "/boot/firmware" | cut -f1 -d" ")
+#sudo df -k | grep $FS | awk '{ print $5 ; }' | cut -f1 -d"%"
+    FS=$(df | grep "/dev/mm" | grep -v "/boot/firmware" | awk '{print $1}' | head -n 1)
+    if [ -n "$FS" ]; then
+        sudo df -k | grep "$FS" | awk '{ print $5 }' | tr -d '%'
+    else
+        echo "N/A"
+    fi
+
 }
 #+-----------------------------------------------------------------------------
 #* Get link performance
@@ -81,14 +88,14 @@ echo "$DOWN-$HOST"
 #* Gather telemetry and assemble an information frame with it, log at Syslog
 #*--------------------------------------------------------------------------
 
-echo "CPU($getCPU)"
+echo "CPU($(getCPU))"
 
-sar 1 3 | grep "Average:" | while read a ; do
- echo $a | awk '{print $3 + $4 + $5 + $6 + $7}';
-done
+#sar 1 3 | grep "Average:" | while read a ; do
+# echo $a | awk '{print $3 + $4 + $5 + $6 + $7}';
+#done
 
-#STATE="T($(getTemp)°C) V($(getVolt)V) Clk($(getClock)MHz) St($(getStatus)) CPU($(getCPU)%) DASD($(getDASD)%) LINK($(getLink))" 
-#echo $STATE | logger -i -t "TLM"
-#echo $STATE 
+STATE="T($(getTemp)°C) V($(getVolt)V) Clk($(getClock)MHz) St($(getStatus)) CPU($(getCPU)%) DASD($(getDASD)%) LINK($(getLink))" 
+echo $STATE | logger -i -t "TLM"
+echo $STATE 
 
 

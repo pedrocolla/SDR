@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/apps
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

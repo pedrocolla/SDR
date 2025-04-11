@@ -6,6 +6,7 @@
 /usr/local/include/gnuradio/customModule/filtro_FIR_cpp.h
 /usr/local/include/gnuradio/customModule/hello_mpi_gnuradio.h
 /usr/local/include/gnuradio/customModule/filtro_FIR_cluster.h
+/usr/local/include/gnuradio/customModule/filtro_FIR_cluster_log.h
 /usr/local/lib/arm-linux-gnueabihf/libgnuradio-customModule.so.1.0.0.0
 /usr/local/lib/arm-linux-gnueabihf/libgnuradio-customModule.so.1.0.0
 /usr/local/lib/arm-linux-gnueabihf/libgnuradio-customModule.so
@@ -30,3 +31,4 @@
 /usr/local/share/gnuradio/grc/blocks/customModule_filtro_FIR_cpp.block.yml
 /usr/local/share/gnuradio/grc/blocks/customModule_hello_mpi_gnuradio.block.yml
 /usr/local/share/gnuradio/grc/blocks/customModule_filtro_FIR_cluster.block.yml
+/usr/local/share/gnuradio/grc/blocks/customModule_filtro_FIR_cluster_log.block.yml

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /clusterfs/sdr/gnuradio/gr-customModule
+CMAKE_SOURCE_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /clusterfs/sdr/gnuradio/gr-customModule/build
+CMAKE_BINARY_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule/build
 
 # Utility rule file for customModule_docstrings.
 
@@ -69,8 +69,8 @@ include python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/prog
 python/customModule/bindings/CMakeFiles/customModule_docstrings: python/customModule/bindings/docstring_status
 
 python/customModule/bindings/docstring_status:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/clusterfs/sdr/gnuradio/gr-customModule/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying customModule docstring templates as pybind headers ..."
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings && /usr/bin/python3 /clusterfs/sdr/gnuradio/gr-customModule/docs/doxygen/update_pydoc.py copy --bindings_dir /clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings/docstrings --output_dir /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/srv/clusterfs/sdr/gnuradio/gr-customModule/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying customModule docstring templates as pybind headers ..."
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings && /usr/bin/python3 /srv/clusterfs/sdr/gnuradio/gr-customModule/docs/doxygen/update_pydoc.py copy --bindings_dir /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings/docstrings --output_dir /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings
 
 customModule_docstrings: python/customModule/bindings/CMakeFiles/customModule_docstrings
 customModule_docstrings: python/customModule/bindings/docstring_status
@@ -82,10 +82,10 @@ python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/build: custo
 .PHONY : python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/build
 
 python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/clean:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings && $(CMAKE_COMMAND) -P CMakeFiles/customModule_docstrings.dir/cmake_clean.cmake
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings && $(CMAKE_COMMAND) -P CMakeFiles/customModule_docstrings.dir/cmake_clean.cmake
 .PHONY : python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/clean
 
 python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/depend:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /clusterfs/sdr/gnuradio/gr-customModule /clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings /clusterfs/sdr/gnuradio/gr-customModule/build /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/DependInfo.cmake --color=$(COLOR)
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /srv/clusterfs/sdr/gnuradio/gr-customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings /srv/clusterfs/sdr/gnuradio/gr-customModule/build /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/customModule/bindings/CMakeFiles/customModule_docstrings.dir/depend
 

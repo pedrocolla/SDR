@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,17 +43,17 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/clusterfs/sdr/gnuradio/gr-customModule/cmake/Modules/gnuradio-customModuleConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gnuradio-customModule" TYPE FILE FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/cmake/Modules/gnuradio-customModuleConfig.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/include/gnuradio/customModule/cmake_install.cmake")
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/lib/cmake_install.cmake")
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/apps/cmake_install.cmake")
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/docs/cmake_install.cmake")
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/cmake_install.cmake")
-  include("/clusterfs/sdr/gnuradio/gr-customModule/build/grc/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/include/gnuradio/customModule/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/apps/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/docs/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/cmake_install.cmake")
+  include("/srv/clusterfs/sdr/gnuradio/gr-customModule/build/grc/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/clusterfs/sdr/gnuradio/gr-customModule/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

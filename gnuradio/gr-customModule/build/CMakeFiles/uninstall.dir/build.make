@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /clusterfs/sdr/gnuradio/gr-customModule
+CMAKE_SOURCE_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /clusterfs/sdr/gnuradio/gr-customModule/build
+CMAKE_BINARY_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/uninstall.dir/compiler_depend.make
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /clusterfs/sdr/gnuradio/gr-customModule/build/cmake_uninstall.cmake
+	/usr/bin/cmake -P /srv/clusterfs/sdr/gnuradio/gr-customModule/build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /clusterfs/sdr/gnuradio/gr-customModule /clusterfs/sdr/gnuradio/gr-customModule /clusterfs/sdr/gnuradio/gr-customModule/build /clusterfs/sdr/gnuradio/gr-customModule/build /clusterfs/sdr/gnuradio/gr-customModule/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /srv/clusterfs/sdr/gnuradio/gr-customModule /srv/clusterfs/sdr/gnuradio/gr-customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/build /srv/clusterfs/sdr/gnuradio/gr-customModule/build /srv/clusterfs/sdr/gnuradio/gr-customModule/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

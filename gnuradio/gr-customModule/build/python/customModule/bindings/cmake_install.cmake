@@ -1,4 +1,4 @@
-# Install script for directory: /clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings
+# Install script for directory: /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule/bindings
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "pythonapi" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule/customModule_python.cpython-311-arm-linux-gnueabihf.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule" TYPE MODULE FILES "/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/customModule_python.cpython-311-arm-linux-gnueabihf.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule" TYPE MODULE FILES "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/bindings/customModule_python.cpython-311-arm-linux-gnueabihf.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule/customModule_python.cpython-311-arm-linux-gnueabihf.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule/customModule_python.cpython-311-arm-linux-gnueabihf.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule/customModule_python.cpython-311-arm-linux-gnueabihf.so"
-         OLD_RPATH "/clusterfs/sdr/gnuradio/gr-customModule/build/lib:/usr/lib/arm-linux-gnueabihf/openmpi/lib:"
+         OLD_RPATH "/srv/clusterfs/sdr/gnuradio/gr-customModule/build/lib:/usr/lib/arm-linux-gnueabihf/openmpi/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.11/dist-packages/gnuradio/customModule/customModule_python.cpython-311-arm-linux-gnueabihf.so")

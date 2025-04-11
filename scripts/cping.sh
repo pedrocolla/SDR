@@ -54,7 +54,7 @@ for i in $(echo $NODE)
     P=$(ping $i -c 1 | grep 'time=' | grep -v 'No route to host' | wc -l)
     if [ $P -ge 1 ]
     then
-       echo "nodo($i) ip[$IP]: ttl=$(ping -c 1 sdr-s01 | grep "time=" | cut -f 4 -d"=")"
+       echo "nodo($i) ip[$IP]: ttl=$(ping -c 1 $i | grep "time=" | cut -f 4 -d"=")"
     else
        echo "nodo($i) ip[$IP]: no disponible"
     fi

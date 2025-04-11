@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /clusterfs/sdr/gnuradio/gr-customModule
+CMAKE_SOURCE_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /clusterfs/sdr/gnuradio/gr-customModule/build
+CMAKE_BINARY_DIR = /srv/clusterfs/sdr/gnuradio/gr-customModule/build
 
 # Utility rule file for copy_module_for_tests.
 
@@ -67,7 +67,7 @@ include python/customModule/CMakeFiles/copy_module_for_tests.dir/compiler_depend
 include python/customModule/CMakeFiles/copy_module_for_tests.dir/progress.make
 
 python/customModule/CMakeFiles/copy_module_for_tests:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule && /usr/bin/cmake -E copy_directory /clusterfs/sdr/gnuradio/gr-customModule/python/customModule /clusterfs/sdr/gnuradio/gr-customModule/build/test_modules/gnuradio/customModule/
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule && /usr/bin/cmake -E copy_directory /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/build/test_modules/gnuradio/customModule/
 
 copy_module_for_tests: python/customModule/CMakeFiles/copy_module_for_tests
 copy_module_for_tests: python/customModule/CMakeFiles/copy_module_for_tests.dir/build.make
@@ -78,10 +78,10 @@ python/customModule/CMakeFiles/copy_module_for_tests.dir/build: copy_module_for_
 .PHONY : python/customModule/CMakeFiles/copy_module_for_tests.dir/build
 
 python/customModule/CMakeFiles/copy_module_for_tests.dir/clean:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule && $(CMAKE_COMMAND) -P CMakeFiles/copy_module_for_tests.dir/cmake_clean.cmake
 .PHONY : python/customModule/CMakeFiles/copy_module_for_tests.dir/clean
 
 python/customModule/CMakeFiles/copy_module_for_tests.dir/depend:
-	cd /clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /clusterfs/sdr/gnuradio/gr-customModule /clusterfs/sdr/gnuradio/gr-customModule/python/customModule /clusterfs/sdr/gnuradio/gr-customModule/build /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule /clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /srv/clusterfs/sdr/gnuradio/gr-customModule/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /srv/clusterfs/sdr/gnuradio/gr-customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/python/customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/build /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule /srv/clusterfs/sdr/gnuradio/gr-customModule/build/python/customModule/CMakeFiles/copy_module_for_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : python/customModule/CMakeFiles/copy_module_for_tests.dir/depend
 

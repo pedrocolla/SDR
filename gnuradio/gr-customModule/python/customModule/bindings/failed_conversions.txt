@@ -1,1 +1,12 @@
 ./include/gnuradio/customModule/filtro_FIR_Cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/api.h'line'
+./include/gnuradio/customModule/multDivSelect.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/escalar_flotante_cpp.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_3polos_cpp.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cpp.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster.hError occurred while running CASTXML xml file does not exist
+./include/gnuradio/customModule/filtro_FIR_cluster_v2.hError occurred while running CASTXML xml file does not exist

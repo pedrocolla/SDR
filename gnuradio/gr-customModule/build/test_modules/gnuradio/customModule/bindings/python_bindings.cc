@@ -27,6 +27,7 @@ namespace py = pybind11;
     void bind_filtro_FIR_cpp(py::module& m);
     void bind_hello_mpi_gnuradio(py::module& m);
     void bind_filtro_FIR_cluster(py::module& m);
+    void bind_filtro_FIR_cluster_log(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -61,5 +62,6 @@ PYBIND11_MODULE(customModule_python, m)
     bind_filtro_FIR_cpp(m);
     bind_hello_mpi_gnuradio(m);
     bind_filtro_FIR_cluster(m);
+    bind_filtro_FIR_cluster_log(m);
     // ) END BINDING_FUNCTION_CALLS
 }

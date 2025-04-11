@@ -17,7 +17,6 @@ class filtro_FIR_cluster_impl : public filtro_FIR_cluster
 {
 private:
     int _num_nodos;
-
 public:
     filtro_FIR_cluster_impl(const std::vector<float>& coef, int num_nodo);
     ~filtro_FIR_cluster_impl();

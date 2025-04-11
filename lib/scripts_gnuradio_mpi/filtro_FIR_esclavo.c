@@ -2,20 +2,9 @@
 #include <string.h>
 #include <mpi.h>
 #include <stdbool.h>
-
-#include <signal.h>
 #include <stdlib.h>
-void señal(int señal)
-{
-    if(señal == SIGSEGV)
-    {
-        printf("Problema en el stack");
-        exit(1);
-    }
-}
 
 int main(int argc, char** argv){
-    signal(SIGSEGV, señal);
     int node;
     char cpuname[20];
     int  cpulen;
