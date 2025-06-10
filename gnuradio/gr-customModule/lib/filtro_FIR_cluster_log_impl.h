@@ -23,7 +23,6 @@ private:
     MPI_Comm inter_comm;  // Comunicador para procesos esclavos
     FILE* log = NULL;
     int contador = 0;
-    bool registrando_log = true;
 
 public:
     filtro_FIR_cluster_log_impl(const std::vector<float>& coef,

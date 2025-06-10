@@ -234,24 +234,6 @@ blocks:
     coordinate: [1024, 308.0]
     rotation: 0
     state: disabled
-- name: customModule_filtro_FIR_cluster_log_0
-  id: customModule_filtro_FIR_cluster_log
-  parameters:
-    affinity: ''
-    alias: ''
-    coef: '[1.0, 0.0, 0.0]'
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    num_muestras_log: '10000000'
-    num_nodos: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [320, 228.0]
-    rotation: 0
-    state: enabled
 - name: fir_filter_xxx_0
   id: fir_filter_xxx
   parameters:
@@ -278,7 +260,7 @@ blocks:
     bus_structure: null
     coordinate: [320, 108.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: fir_filter_xxx_0_0
   id: fir_filter_xxx
   parameters:
@@ -634,7 +616,6 @@ connections:
 - [analog_noise_source_x_0, '0', customModule_filtro_FIR_cluster_0, '0']
 - [analog_noise_source_x_0, '0', customModule_filtro_FIR_cluster_0_0, '0']
 - [analog_noise_source_x_0, '0', customModule_filtro_FIR_cluster_0_1, '0']
-- [analog_noise_source_x_0, '0', customModule_filtro_FIR_cluster_log_0, '0']
 - [analog_noise_source_x_0, '0', fir_filter_xxx_0, '0']
 - [analog_noise_source_x_0, '0', fir_filter_xxx_0_0, '0']
 - [analog_noise_source_x_0_0, '0', customModule_filtro_FIR_cluster_0_2, '0']
@@ -650,7 +631,6 @@ connections:
 - [customModule_filtro_FIR_cluster_0_1, '0', qtgui_freq_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_1, '0', qtgui_time_sink_x_0, '0']
 - [customModule_filtro_FIR_cluster_0_2, '0', qtgui_freq_sink_x_0_0, '0']
-- [customModule_filtro_FIR_cluster_log_0, '0', qtgui_freq_sink_x_0, '0']
 - [fir_filter_xxx_0, '0', qtgui_freq_sink_x_0, '0']
 - [fir_filter_xxx_0_0, '0', qtgui_freq_sink_x_0, '0']
 - [fir_filter_xxx_0_0, '0', qtgui_time_sink_x_0, '0']

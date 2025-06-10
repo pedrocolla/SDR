@@ -3,6 +3,7 @@
 #include <mpi.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(int argc, char** argv){
     int node;
@@ -63,17 +64,39 @@ int main(int argc, char** argv){
     float* salida = NULL;
     int tamaño_actual_entrada = 0;
     
+    // LOG
+    char nombre[64];
+    char strfecha[64];
+    time_t t = time(NULL);
+    struct tm* fecha = localtime(&t);
+    strftime(strfecha, sizeof(strfecha), "%y-%m-%d_%H-%M-%S.csv", fecha);
+    snprintf(nombre, sizeof(nombre), "/srv/clusterfs/sdr/logs_filtro/log_esclavo_%s-%d_%s", cpuname, node, strfecha);
+ 
+    struct timespec tiempo;
+    long long t0, t1, t2, t3, t4, t5, t6, t7 = 0;   
+    FILE* log = fopen(nombre, "w");
+    
+    fprintf(log, "Inicio, Continuar, Recep_Num_Muestras, Ampliacion_Array, Recepcion, Convolucion, Historial, Devolucion, Num_Muestras\n");
+    
+    // INICIO DEL FILTRADO
     bool debe_parar = false;
     while(debe_parar == false)
     {
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t0 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
+
         // Recibe la indicación de que el programa continua.
         MPI_Bcast(&debe_parar, 1, MPI_C_BOOL, 0, comm_master);
         //printf("Recibida correctamente la señal de continuación. Esclavo: %d\n", node);
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t1= tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
         
         // Primero recibe un broadcast indicando la cantidad de muestras por recibir.
         int num_muestras;
         MPI_Bcast(&num_muestras, 1, MPI_INT, 0, comm_master);
         //printf("Recibida correctamente la cantidad de muestras esperada (%d). Esclavo: %d\n", num_muestras, node);
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t2 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
         
         // Cada vez que reciba un volumen mayor a cualquiera recibido anteriormente, aumenta de forma permanente
         // el tamaño de los buffers. 
@@ -94,10 +117,14 @@ int main(int argc, char** argv){
                 return 1;
             }
         }
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t3 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
         
         MPI_Bcast(entrada, num_muestras, MPI_FLOAT, 0, comm_master);
         //printf("Muestras recibidas correctamente. Esclavo: %d\n", node);
-        
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t4 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
+
         for(int i=0; i < num_muestras;i++)
         {
             salida[i] = 0;
@@ -113,6 +140,8 @@ int main(int argc, char** argv){
                 }
             }     
         }
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t5 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
         
         if(num_muestras < num_coefs-1)
         {
@@ -131,16 +160,31 @@ int main(int argc, char** argv){
                 historial[h] = entrada[num_muestras-1-h];
             }      
         }
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t6 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
         
         
         MPI_Reduce(salida, NULL, num_muestras, MPI_FLOAT, MPI_SUM, 0, comm_master);
         //MPI_Gather(salida, num_muestras, MPI_FLOAT, NULL, 0, MPI_FLOAT, 0, comm_master);
         //printf("Enviadas correctamente las muestras filtradas. Esclavo: %d\n", node);
+        clock_gettime(CLOCK_MONOTONIC, &tiempo);
+        t7 = tiempo.tv_sec * 1000000000LL + tiempo.tv_nsec;
+        
+        // Recibe la indicación de que el programa continua.
+        bool log_activo = false;
+        MPI_Bcast(&log_activo, 1, MPI_C_BOOL, 0, comm_master);
+        
+        if(log_activo == true)
+        {
+            fprintf(log, "%lld, %lld, %lld, %lld, %lld, %lld, %lld, %lld, %d\n",t0, t1, t2, t3, t4, t5, t6, t7, num_muestras);   
+        }
+
     }
     free(coefs);
     free(historial);
     free(entrada);
     free(salida);
+    fclose(log);
     printf("Finalizando... Esclavo: %d\n", node);
     MPI_Finalize();
 }
