@@ -250,8 +250,8 @@ blocks:
     comment: FIR Orden100 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '720000'
-    num_nodos: '2'
+    num_muestras_log: '10000000'
+    num_nodos: '1'
   states:
     bus_sink: false
     bus_source: false
