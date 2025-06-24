@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '24000'
+    value: '10000'
   states:
     bus_sink: false
     bus_source: false
@@ -102,9 +102,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [192, 396.0]
+    coordinate: [208, 388.0]
     rotation: 0
-    state: true
+    state: enabled
 - name: customModule_filtro_FIR_cluster_log_0
   id: customModule_filtro_FIR_cluster_log
   parameters:
@@ -123,8 +123,8 @@ blocks:
     comment: FIR Orden20 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
-    num_nodos: '1'
+    num_muestras_log: '10000000'
+    num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -141,8 +141,8 @@ blocks:
     comment: FIR Orden10 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
-    num_nodos: '3'
+    num_muestras_log: '10000000'
+    num_nodos: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -183,8 +183,8 @@ blocks:
     comment: FIR Orden50 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
-    num_nodos: '1'
+    num_muestras_log: '10000000'
+    num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -251,14 +251,14 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     num_muestras_log: '10000000'
-    num_nodos: '1'
+    num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 460.0]
+    coordinate: [336, 484.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: customModule_filtro_FIR_cluster_log_0_3
   id: customModule_filtro_FIR_cluster_log
   parameters:
@@ -268,8 +268,8 @@ blocks:
     comment: FIR Orden80 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
-    num_nodos: '1'
+    num_muestras_log: '10000000'
+    num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
@@ -535,13 +535,13 @@ blocks:
     comment: FIR Orden1000 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
-    num_nodos: '2'
+    num_muestras_log: '10000000'
+    num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 556.0]
+    coordinate: [328, 1372.0]
     rotation: 0
     state: disabled
 - name: customModule_filtro_FIR_cluster_log_0_3_0_0
@@ -602,13 +602,13 @@ blocks:
     comment: FIR Orden200 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
+    num_muestras_log: '10000000'
     num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 644.0]
+    coordinate: [320, 620.0]
     rotation: 0
     state: disabled
 - name: customModule_filtro_FIR_cluster_log_0_3_0_0_0
@@ -953,7 +953,7 @@ blocks:
     comment: FIR Orden500 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
+    num_muestras_log: '10000000'
     num_nodos: '3'
   states:
     bus_sink: false
@@ -1126,7 +1126,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 996.0]
+    coordinate: [328, 1012.0]
     rotation: 0
     state: disabled
 - name: customModule_filtro_FIR_cluster_log_0_3_0_0_0_0_0_0_0
@@ -1318,7 +1318,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 1076.0]
+    coordinate: [328, 1092.0]
     rotation: 0
     state: disabled
 - name: customModule_filtro_FIR_cluster_log_0_3_0_0_0_0_0_0_0_0
@@ -1529,15 +1529,15 @@ blocks:
     comment: FIR Orden800 Hamming Fc=1000Hz Fs=10kHz
     maxoutbuf: '0'
     minoutbuf: '0'
-    num_muestras_log: '80000000'
+    num_muestras_log: '10000000'
     num_nodos: '3'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 1164.0]
+    coordinate: [328, 1180.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: customModule_filtro_FIR_cluster_log_0_3_0_0_0_0_0_0_0_0_0
   id: customModule_filtro_FIR_cluster_log
   parameters:
@@ -1777,7 +1777,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 1244.0]
+    coordinate: [328, 1276.0]
     rotation: 0
     state: disabled
 - name: qtgui_freq_sink_x_0
@@ -1858,7 +1858,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648, 300.0]
+    coordinate: [720, 308.0]
     rotation: 0
     state: enabled
 
