@@ -75,7 +75,7 @@ class pruebas_filtro_cluster(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.samp_rate = samp_rate = 10000
+        self.samp_rate = samp_rate = 24000
 
         ##################################################
         # Blocks
