@@ -40,14 +40,25 @@ filtro_FIR_cluster_log_impl::filtro_FIR_cluster_log_impl(const std::vector<float
     //MPI_Comm_rank(MPI_COMM_WORLD, &node);
     MPI_Get_processor_name(cpuname, &cpulen);
     
+    MPI_Info info;
+    MPI_Info_create(&info);
+    MPI_Info_set(info, "bind_to", "none");
+    MPI_Info_set(info, "map_by", "slot");
+    MPI_Info_set(info, "hostfile", "/srv/clusterfs/sdr/etc/hostfile.s");
+    
     printf("[%s] Filtro maestro iniciado.\n", cpuname);
+    
+    const char* ruta_esclavo;
     if(_num_muestras_log != 0)
-    {    
-        MPI_Comm_spawn("/srv/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo_log", MPI_ARGV_NULL, num_nodos, MPI_INFO_NULL, 0, MPI_COMM_SELF, &inter_comm, MPI_ERRCODES_IGNORE);
+    {   
+        ruta_esclavo = "/srv/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo_log";
     }else
     {
-         MPI_Comm_spawn("/srv/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo", MPI_ARGV_NULL, num_nodos, MPI_INFO_NULL, 0, MPI_COMM_SELF, &inter_comm, MPI_ERRCODES_IGNORE);
+        ruta_esclavo = "/srv/clusterfs/sdr/lib/scripts_gnuradio_mpi/filtro_FIR_esclavo";
     }
+ 
+    MPI_Comm_spawn(ruta_esclavo, MPI_ARGV_NULL, num_nodos, info, 0, MPI_COMM_SELF, &inter_comm, MPI_ERRCODES_IGNORE);
+
  
     int _num_coefs = coef.size();
     

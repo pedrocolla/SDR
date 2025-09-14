@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: '24000'
+    value: '10000'
   states:
     bus_sink: false
     bus_source: false
@@ -1530,7 +1530,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     num_muestras_log: '10000000'
-    num_nodos: '3'
+    num_nodos: '15'
   states:
     bus_sink: false
     bus_source: false

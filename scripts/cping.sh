@@ -40,6 +40,7 @@ ARGS=$#
 NODE=$(cat $HOSTS | grep $SELECT | grep $INCLUDE | grep -v $EXCLUDE | awk '{ print $2 ; }' | cut -f1 -d"%")
 CMD=$1
 
+echo $NODE
 case $1 in
     -n|-N)
       NODE="$2"

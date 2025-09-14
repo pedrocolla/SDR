@@ -12,5 +12,5 @@
 cat $HOSTFILE | grep -v "#" | cut -f 1 -d" " > tmpfile
 echo "Nodes:"
 cat tmpfile
-mpirun --hostfile tmpfile --oversubscribe python /clusterfs/sdr/python/mpi4/mpi4.py
+mpirun --hostfile tmpfile --oversubscribe python /srv/clusterfs/sdr/python/mpi4/mpi4.py
 rm -r tmpfile
