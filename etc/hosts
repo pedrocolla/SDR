@@ -1,0 +1,30 @@
+#*------------------------------------------------------------------------------------------------
+#* Universidad Autónoma de Entre Rios
+#* Facultad de Ciencia y Tecnología
+#* Ingeniería de Telecomunicaciones
+#*
+#* Proyecto de investigación
+#* Procesamiento de señales mediante cluster
+#* Microcluster LAN
+#*
+#* DNS File red interna
+#*
+#*------------------------------------------------------------------------------------------------
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+#*---- Topologia de cluster
+
+127.0.0.1       sdr-s00
+10.0.0.200      sdr-s00
+
+10.0.0.202      sdr-s02
+10.0.0.203      sdr-s03
+10.0.0.204	sdr-s04
+
+#*---- Topologia de red
+
+10.0.0.199      sdr-switch
+10.0.0.1        sdr-router
