@@ -1,0 +1,12 @@
+scripts/
+python/
+normal/
+logs_filtro/
+lib/
+!lib/scripts_gnuradio_mpi/*
+coeficientes_filtro/
+gnuradio/
+!gnuradio/gr-customModule/**
+etc/
+!etc/hosts
+!etc/hostfile.s
